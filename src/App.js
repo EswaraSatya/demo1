@@ -16,7 +16,7 @@ function App() {
   };
   return (
     <>
-      <nav className="navbar">
+      <nav className="navbar"> 
         <div className="navbar-container">
           <a
             href="http://magical-hands.in/images/big-logo.png"
