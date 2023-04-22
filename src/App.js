@@ -12,17 +12,17 @@ function App() {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu); 
+    setShowMenu(!showMenu);
   };
   return (
     <>
-      <nav className="navbar"> 
+      <nav className="navbar">
         <div className="navbar-container">
           <a
             href="http://magical-hands.in/images/big-logo.png"
             className="navbar-logo"
           >
-            Logo
+            Magical Hands
           </a>
           {/* <img src="http://magical-hands.in/images/big-logo.png"></img> */}
           <div className="navbar-toggle" onClick={toggleMenu}>
