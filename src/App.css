@@ -1,38 +1,259 @@
-.App {
+.nuka-carousel {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+}
+
+.nuka-carousel img {
+  height: 70%;
+  object-fit: cover;
+}
+.carousel-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+.carousel-button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.carousel-icon {
+  font-size: 24px;
+  color: #333;
+  transition: color 0.2s ease-in-out;
+}
+
+.carousel-icon:hover {
+  color: #000;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-control:hover {
+  color: #f7cd2e;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+}
+
+.carosel {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: -1px 20px;
+}
+
+/* .carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+} */
+
+@media screen and (max-width: 768px) {
+  .carousel .slider-list {
+    margin: 0 -20px;
+  }
+
+  .carousel .slider-slide {
+    padding: 0 10px;
+  }
+
+  .carousel .slider-frame {
+    padding: 0 20px;
+  }
+
+  .carousel .slider-control-centerleft,
+  .carousel .slider-control-centerright {
+    display: none;
+  }
+
+  .carousel .slider-control-bottomcenter {
+    margin-bottom: 20px;
+  }
+
+  .carousel .slider-control-bottomcenter button {
+    font-size: 30px;
+    padding: 0 10px;
+  }
+
+  .carousel .carousel-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.navbar {
+  background-color: transparent;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-radius: 10%;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-menu.active {
+  display: block;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar-item {
+  margin: 0 10px;
+}
+
+.navbar-link {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 10px;
+}
+
+.navbar-link:hover {
+  color: #dcdcdc;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}
+.navbar-toggle {
+  display: none;
+  position: relative;
+  /* z-index: 999; */
+  cursor: pointer;
+}
+/* .navbar-toggle .fa-bars {
+  transition: transform 0.3s ease-in-out;
+} */
+
+@media screen and (max-width: 960px) {
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-toggle .fa-bars {
+    transition: transform 0.3s ease-in-out;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: #fff;
+    z-index: 1;
+  }
+  .navbar-menu.active {
+    display: block;
+  }
+  .navbar-item {
+    margin: 0;
+    text-align: center;
+  }
+  .navbar-link {
+    display: block;
+    padding: 1rem;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .navbar-link:hover {
+    background-color: #eee;
+  }
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* @media screen and (min-width: 960px) {
+  .navbar-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
-  to {
-    transform: rotate(360deg);
+  .navbar-item {
+    margin-right: 20px;
   }
-}
+  .navbar-link {
+    color: #7c6767;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+  }
+  .navbar-link:hover {
+    color: #c7d6dd;
+  }
+} */
