@@ -12,7 +12,7 @@ function App() {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu);
+    setShowMenu(!showMenu); 
   };
   return (
     <>
